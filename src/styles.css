@@ -1,0 +1,91 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #ecf1ff;
+  background-color: #090d16;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: radial-gradient(circle at top, #141a2a, #090d16 65%);
+}
+
+.card {
+  width: min(420px, 100%);
+  border: 1px solid rgba(236, 241, 255, 0.15);
+  border-radius: 24px;
+  background: rgba(16, 21, 36, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.count {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+.shape-wrap {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+}
+
+.shape {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(160deg, #72f4d4, #58a0ff);
+  box-shadow: 0 0 50px rgba(88, 160, 255, 0.35);
+}
+
+.phase {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.control {
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  min-width: 170px;
+  cursor: pointer;
+  color: #0d1425;
+  background: #ecf1ff;
+  transition: transform 120ms ease, box-shadow 160ms ease;
+}
+
+.control:hover,
+.control:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(236, 241, 255, 0.25);
+}
+
+.control:active {
+  transform: translateY(1px);
+}
